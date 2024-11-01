@@ -18,6 +18,7 @@ int main(int argc, char **argv, char **env)
     Verilated::traceEverOn(true);
     VerilatedVcdC *tfp = new VerilatedVcdC;
     top->trace(tfp, 99);
+    // TODO Use 32 ticks for 1 second
     tfp->open("clktick.vcd");
 
     // init Vbuddy

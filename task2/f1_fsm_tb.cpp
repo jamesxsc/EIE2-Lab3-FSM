@@ -1,14 +1,14 @@
 //
 // Created by eliott on 11/1/2024.
 //
-#include "Vf1_fsm.h"
+#include "Vdut.h"
 #include "verilated.h"
 #include "vbuddy.cpp"     // Include Vbuddy header
 #include <iostream>
 
 int main(int argc, char **argv, char **env) {
     Verilated::commandArgs(argc, argv);
-    Vf1_fsm* top = new Vf1_fsm;  // Instantiate the FSM module
+    Vdut* top = new Vdut;  // Instantiate the FSM module
 
     // Initialize Vbuddy
     if (vbdOpen() != 1) return -1;
