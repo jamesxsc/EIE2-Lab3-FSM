@@ -2,3 +2,4 @@ obj_dir/
 main
 .vscode/
 *.vcd
+.idea/
