@@ -11,10 +11,11 @@ endif()
 add_executable(lfsr ./verify.cpp)
 target_compile_features(lfsr PRIVATE cxx_std_17)
 
-verilate(lfsr.sv TRACE
+verilate(lfsr TRACE
         VERILATOR_ARGS -Wall
         SOURCES ./lfsr.sv
         --prefix Vdut
         -CFLAGS "-isystem /opt/homebrew/Cellar/googletest/1.15.2/include"
         -LDFLAGS "-L/opt/homebrew/Cellar/googletest/1.15.2/lib -lgtest -lgtest_main -lpthread"
 )
+
