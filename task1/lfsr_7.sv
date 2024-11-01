@@ -5,7 +5,7 @@ module lfsr_7 (
     output  logic [6:0] data_out
 
 );
-
+    logic [6:0] sreg;
     always_ff @(posedge clk or posedge reset) begin
         if (reset)
             prbs <= 7'b0000001; // Initial non-zero seed value

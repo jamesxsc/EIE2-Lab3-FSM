@@ -5,7 +5,7 @@ module lfsr4 (
     input   logic       en,
     output logic [4:1] data_out    // pseudo-random output
 );
-
+    logic [4:1] sreg;
     always_ff @ (posedge clk, posedge rst)
         if (rst)
             sreg <= 4'b1;
