@@ -12,7 +12,7 @@ module lfsr4 (
         else if (en)
             sreg <= {sreg[3:1], sreg[4] ^ sreg[3]};
         else
-            sreg<=sreg
+            sreg<=sreg;
 
     assign data_out = sreg;
 endmodule
