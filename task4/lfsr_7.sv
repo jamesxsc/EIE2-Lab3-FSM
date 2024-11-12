@@ -5,7 +5,7 @@ module lfsr_7 (
 );
 
     logic [6:0] sreg;
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk) begin
         if (rst)
             sreg <= 7'b0000001; // Initial non-zero seed value
         else begin

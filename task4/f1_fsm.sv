@@ -55,7 +55,7 @@ module f1_fsm (
     end
 
     // State transition on clock edge
-    always_ff @(posedge clk or posedge rst) begin
+    always_ff @(posedge clk) begin
         if (rst)
             state <= S0;
         else

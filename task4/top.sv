@@ -2,7 +2,7 @@ module top (
     input logic clk,
     input logic rst,
     input logic trigger,
-    output logic [7:0] data_out,
+    output logic [7:0] data_out
 );
 
 logic tick;
